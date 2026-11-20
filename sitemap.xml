@@ -4,12 +4,21 @@
     <loc>https://www.tecnolakis.com.ar/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
+  </url>
+  <url>
+    <loc>https://www.tecnolakis.com.ar/en/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
   </url>
   <url>
     <loc>https://www.tecnolakis.com.ar/portugues/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
   </url>
 </urlset>

@@ -7,6 +7,7 @@
   <meta name="description" content="Tecnolakis é o seu parceiro tecnológico: gestão do departamento de TI, suporte, redes, segurança da informação, telefonia, consultoria e desenvolvimento web para empresas.">
   <link rel="canonical" href="https://www.tecnolakis.com.ar/portugues/">
   <link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/">
+  <link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/">
   <link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/">
   <link rel="alternate" hreflang="x-default" href="https://www.tecnolakis.com.ar/">
   <meta name="theme-color" content="#24303B">
@@ -138,10 +139,10 @@
     .menu { display: flex; align-items: center; gap: 28px; list-style: none; }
     .menu a { text-decoration: none; font-weight: 700; color: var(--muted); }
     .menu a:hover { color: var(--ink); }
-    .menu .lang { display: flex; align-items: center; gap: 8px; }
-    .menu .lang .flag { width: 30px; height: 21px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); transition: transform .15s; }
-    .menu .lang:hover .flag { transform: scale(1.1); }
-    .menu .lang-text { display: none; }
+    .langs { display: flex; align-items: center; gap: 10px; }
+    .menu .flag { display: inline-flex; padding: 4px; border-radius: 6px; line-height: 0; transition: transform .15s ease, background .15s ease; }
+    .menu .flag:hover { transform: translateY(-2px); background: var(--soft); }
+    .flag svg { width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(36,48,59,.15); }
     .menu .btn { padding: 10px 18px; color: var(--ink-dark); }
     .menu-toggle { display: none; background: none; border: 0; color: var(--ink); cursor: pointer; padding: 8px; }
     .menu-toggle svg { width: 28px; height: 28px; }
@@ -355,8 +356,9 @@
       }
       .menu.open { display: flex; }
       .menu li a:not(.btn) { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
-      .menu li a.lang { display: flex; }
-      .menu .lang-text { display: inline; }
+      .menu li.langs { padding: 14px 0; border-bottom: 1px solid var(--line); gap: 16px; }
+      .menu li.langs a.flag { display: inline-flex; padding: 4px; border-bottom: 0; }
+      .flag svg { width: 36px; height: 24px; }
       .menu .btn { margin-top: 16px; justify-content: center; }
     }
     @media (max-width: 520px) {
@@ -387,7 +389,10 @@
         <li><a href="#como-trabajamos">Como trabalhamos</a></li>
         <li><a href="#nosotros">Quem somos</a></li>
         <li><a href="#preguntas">Perguntas</a></li>
-        <li><a class="lang" href="../" lang="es" title="Versión en español" aria-label="Versión en español"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#74ACDF"/><rect y="6.67" width="28" height="6.66" fill="#fff"/><circle cx="14" cy="10" r="2.1" fill="#F6B40E" stroke="#85340A" stroke-width=".35"/></svg><span class="lang-text">Español</span></a></li>
+        <li class="langs">
+          <!--FLAG-A--><a class="flag" href="/en/" hreflang="en" lang="en" title="English" aria-label="English version"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#B22234"/><path d="M0 3.08h60v3.08H0zM0 9.23h60v3.08H0zM0 15.38h60v3.08H0zM0 21.54h60v3.08H0zM0 27.69h60v3.08H0zM0 33.85h60v3.08H0z" fill="#fff"/><rect width="24" height="21.54" fill="#3C3B6E"/><g fill="#fff"><circle cx="4" cy="3.5" r="1.1"/><circle cx="9.3" cy="3.5" r="1.1"/><circle cx="14.6" cy="3.5" r="1.1"/><circle cx="20" cy="3.5" r="1.1"/><circle cx="6.6" cy="8" r="1.1"/><circle cx="12" cy="8" r="1.1"/><circle cx="17.3" cy="8" r="1.1"/><circle cx="4" cy="12.5" r="1.1"/><circle cx="9.3" cy="12.5" r="1.1"/><circle cx="14.6" cy="12.5" r="1.1"/><circle cx="20" cy="12.5" r="1.1"/><circle cx="6.6" cy="17" r="1.1"/><circle cx="12" cy="17" r="1.1"/><circle cx="17.3" cy="17" r="1.1"/></g></svg></a><!--/FLAG-A-->
+          <!--FLAG-B--><a class="flag" href="/" hreflang="es" lang="es" title="Español" aria-label="Versión en español"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#74ACDF"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><circle cx="30" cy="20" r="4.4" fill="#F6B40E" stroke="#85340A" stroke-width=".7"/></svg></a><!--/FLAG-B-->
+        </li>
         <li><a class="btn btn-primary wa-link" href="#">Fale conosco</a></li>
       </ul>
     </div>
