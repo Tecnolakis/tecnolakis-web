@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tecnolakis.com.ar/sitemap.xml

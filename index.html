@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tecnolakis · Outsourcing IT, soporte, redes y seguridad para empresas</title>
+  <meta name="description" content="Tecnolakis es tu partner tecnológico: gestión del departamento de sistemas, soporte, redes, seguridad informática, telefonía, consultoría y desarrollo web para empresas en Argentina.">
+  <link rel="canonical" href="https://www.tecnolakis.com.ar/">
+  <link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/">
+  <link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/">
+  <link rel="alternate" hreflang="x-default" href="https://www.tecnolakis.com.ar/">
+  <meta name="theme-color" content="#24303B">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Tecnolakis">
+  <meta property="og:title" content="Tecnolakis · Tu partner tecnológico">
+  <meta property="og:description" content="Outsourcing IT para empresas: soporte, redes, seguridad, telefonía y consultoría. Tecnología que trabaja para tu negocio.">
+  <meta property="og:url" content="https://www.tecnolakis.com.ar/">
+  <meta property="og:image" content="https://www.tecnolakis.com.ar/tecnolakis.jpg">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.tecnolakis.com.ar/#empresa",
+        "name": "Tecnolakis",
+        "alternateName": "Grupo Tecnolakis",
+        "url": "https://www.tecnolakis.com.ar/",
+        "logo": "https://www.tecnolakis.com.ar/tecnolakis.jpg",
+        "description": "Outsourcing IT para empresas: gestión del departamento de sistemas, soporte, redes, seguridad informática, telefonía, consultoría y desarrollo web.",
+        "telephone": "+54 9 3468 50-9019",
+        "email": "info@tecnolakis.com.ar",
+        "areaServed": { "@type": "Country", "name": "Argentina" },
+        "sameAs": [
+          "https://www.instagram.com/tecnolakis/",
+          "https://www.facebook.com/Tecnolakis-101014766898132/",
+          "https://twitter.com/tecnolakis"
+        ],
+        "subOrganization": {
+          "@type": "Organization",
+          "name": "Felizia",
+          "url": "https://www.felizia.com.ar/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.tecnolakis.com.ar/#sitio",
+        "url": "https://www.tecnolakis.com.ar/",
+        "name": "Tecnolakis",
+        "inLanguage": "es-AR",
+        "publisher": { "@id": "https://www.tecnolakis.com.ar/#empresa" }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="isotipo.png" type="image/png">
+  <link rel="apple-touch-icon" href="isotipo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #24303B;        /* grafito: textos y fondos oscuros */
+      --ink-dark: #18212A;
+      --lime: #B2D243;       /* verde lima del logo */
+      --lime-dark: #9BBB2C;
+      --lime-text: #5E7A0C;  /* verde legible sobre fondo claro */
+      --bg: #FBFBFA;
+      --soft: #F3F6EC;
+      --muted: #5F6873;
+      --line: #E4E8E0;
+      --radius: 18px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    section { padding: 88px 0; scroll-margin-top: 72px; }
+    h2 {
+      font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--lime-text);
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-head { max-width: 640px; margin-bottom: 48px; }
+    .section-head p { color: var(--muted); font-size: 1.1rem; margin-top: 12px; }
+
+    /* Botones */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--lime); color: var(--ink-dark); box-shadow: 0 8px 20px rgba(155,187,44,.35); }
+    .btn-primary:hover { background: var(--lime-dark); }
+    .btn-dark { background: var(--ink); color: #fff; box-shadow: 0 8px 20px rgba(36,48,59,.2); }
+    .btn-dark:hover { background: var(--ink-dark); }
+    .btn-ghost { color: var(--ink); border: 2px solid var(--line); background: #fff; }
+    .btn-ghost:hover { border-color: var(--ink); }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(251,251,250,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    header.scrolled { border-bottom-color: var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; color: #6D6E71; }
+    .brand img { width: 42px; height: 42px; }
+    .menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .menu a { text-decoration: none; font-weight: 700; color: var(--muted); }
+    .menu a:hover { color: var(--ink); }
+    .menu .lang { display: flex; align-items: center; gap: 8px; }
+    .menu .lang .flag { width: 30px; height: 21px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); transition: transform .15s; }
+    .menu .lang:hover .flag { transform: scale(1.1); }
+    .menu .lang-text { display: none; }
+    .menu .btn { padding: 10px 18px; color: var(--ink-dark); }
+    .menu-toggle { display: none; background: none; border: 0; color: var(--ink); cursor: pointer; padding: 8px; }
+    .menu-toggle svg { width: 28px; height: 28px; }
+
+    /* Hero */
+    .hero { padding: 72px 0 96px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+    .hero h1 {
+      font-size: clamp(2.3rem, 6vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+    .hero h1 em { font-style: normal; color: var(--lime-dark); }
+    .hero p.lead { font-size: clamp(1.05rem, 2.6vw, 1.25rem); color: var(--muted); margin: 22px 0 32px; max-width: 540px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-note { margin-top: 26px; color: var(--muted); font-size: .95rem; }
+    .hero-note strong { color: var(--ink); }
+    .hero-art { position: relative; aspect-ratio: 1 / 1; max-width: 460px; justify-self: center; width: 100%; }
+    .hero-art .blob {
+      position: absolute; inset: 6%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff 0%, var(--soft) 55%, #E5EDD3 100%);
+    }
+    .hero-art .mark {
+      position: absolute; left: 50%; top: 50%;
+      width: 44%; height: auto;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0 18px 30px rgba(155,187,44,.35));
+      animation: bob 3.4s ease-in-out infinite;
+    }
+    @keyframes bob { 0%,100% { transform: translate(-50%, -50%); } 50% { transform: translate(-50%, calc(-50% - 10px)); } }
+    .chip {
+      position: absolute;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: .9rem;
+      box-shadow: 0 10px 30px rgba(36,48,59,.08);
+      display: flex; align-items: center; gap: 8px;
+      white-space: nowrap;
+    }
+    .chip i { width: 10px; height: 10px; border-radius: 3px; background: var(--lime); display: inline-block; }
+    .chip.c1 { top: 10%; left: -4%; }
+    .chip.c2 { top: 46%; right: -6%; }
+    .chip.c3 { bottom: 8%; left: 6%; }
+
+    /* Servicios */
+    .services { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(36,48,59,.08); border-color: #D2DBC3; }
+    .icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      background: rgba(178,210,67,.2);
+      color: var(--lime-text);
+      margin-bottom: 18px;
+    }
+    .icon svg { width: 26px; height: 26px; }
+    .card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3; }
+    .card p { color: var(--muted); }
+    .card ul { margin-top: 14px; padding-left: 0; list-style: none; color: var(--muted); font-size: .95rem; }
+    .card li { padding-left: 18px; position: relative; margin-top: 6px; }
+    .card li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 2px; background: var(--lime); }
+    .card.felizia { background: linear-gradient(160deg, #FFF3EE 0%, #F2F5FA 100%); border-color: #F3DCD2; text-decoration: none; display: block; }
+    .card.felizia .icon { background: rgba(255,122,80,.14); color: #E8603A; }
+    .card.felizia .more { display: inline-block; margin-top: 14px; font-weight: 800; color: #E8603A; }
+
+    /* Proceso */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: step; position: relative; }
+    .step { position: relative; padding-top: 64px; }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute; top: 0; left: 0;
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      background: var(--ink); color: var(--lime);
+      font-weight: 800; font-size: 1.2rem;
+    }
+    .step::after {
+      content: ""; position: absolute; top: 24px; left: 60px; right: -12px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 14px);
+    }
+    .step:last-child::after { display: none; }
+    .step h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
+    .step p { color: var(--muted); }
+    .step .time { display: inline-block; margin-top: 10px; font-size: .85rem; font-weight: 700; color: var(--lime-text); }
+
+    /* Quiénes somos */
+    .why { background: var(--ink); color: #fff; }
+    .why .eyebrow { color: var(--lime); }
+    .why .section-head p { color: #C5CCD3; }
+    .about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; }
+    .about-box { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 28px; }
+    .about-box h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; color: var(--lime); }
+    .about-box p { color: #C5CCD3; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-item {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+    .why-item .icon { background: rgba(178,210,67,.18); color: var(--lime); }
+    .why-item h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
+    .why-item p { color: #C5CCD3; }
+
+    /* Preguntas frecuentes */
+    .faq { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+    .faq .section-head { margin-bottom: 0; position: sticky; top: 100px; }
+    .faq-list details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+    .faq-list details:first-child { border-top: 1px solid var(--line); }
+    .faq-list summary {
+      list-style: none; cursor: pointer;
+      font-weight: 800; font-size: 1.08rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "+"; flex: none;
+      width: 30px; height: 30px; border-radius: 9px;
+      display: grid; place-items: center;
+      background: rgba(178,210,67,.2); color: var(--lime-text);
+      font-size: 1.3rem; font-weight: 700;
+      transition: transform .2s;
+    }
+    .faq-list details[open] summary::after { transform: rotate(45deg); }
+    .faq-list details p { color: var(--muted); margin-top: 10px; max-width: 620px; }
+
+    /* CTA */
+    .cta { text-align: center; }
+    .cta-box {
+      background: linear-gradient(135deg, #F3F8E3 0%, #F2F4F6 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 64px 24px;
+    }
+    .cta h2 { max-width: 640px; margin: 0 auto; }
+    .cta p { color: var(--muted); font-size: 1.1rem; margin: 14px auto 30px; max-width: 520px; }
+    .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    @media (max-width: 520px) { .cta-actions .btn { width: 100%; justify-content: center; } }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 36px 0; }
+    .foot { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .foot small { color: var(--muted); }
+    .social { display: flex; gap: 10px; list-style: none; }
+    .social a {
+      width: 40px; height: 40px; border-radius: 12px;
+      display: grid; place-items: center;
+      border: 1px solid var(--line); background: #fff; color: var(--muted);
+      transition: color .15s, border-color .15s;
+    }
+    .social a:hover { color: var(--ink); border-color: var(--ink); }
+    .social svg { width: 18px; height: 18px; }
+
+    /* WhatsApp flotante */
+    .wa-float {
+      position: fixed; right: 20px; bottom: 20px; z-index: 30;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; color: #fff;
+      display: grid; place-items: center;
+      box-shadow: 0 10px 24px rgba(37,211,102,.4);
+      transition: transform .15s;
+    }
+    .wa-float:hover { transform: scale(1.06); }
+    .wa-float svg { width: 32px; height: 32px; }
+
+    /* Animación al hacer scroll */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .grid-4, .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+      .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+      .faq .section-head { position: static; }
+      .step::after { display: none; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 64px 0; }
+      .hero { padding: 40px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-art { max-width: 320px; order: -1; }
+      .chip { font-size: .8rem; padding: 8px 10px; }
+      .chip.c1 { left: -2%; } .chip.c2 { right: -2%; }
+      .about-grid { grid-template-columns: 1fr; }
+      .menu-toggle { display: block; }
+      .menu {
+        display: none;
+        position: absolute; top: 72px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        padding: 8px 20px 20px;
+      }
+      .menu.open { display: flex; }
+      .menu li a:not(.btn) { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
+      .menu li a.lang { display: flex; }
+      .menu .lang-text { display: inline; }
+      .menu .btn { margin-top: 16px; justify-content: center; }
+    }
+    @media (max-width: 520px) {
+      .grid-4, .steps, .why-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .foot { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-art .mark { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="top">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Tecnolakis, ir al inicio">
+        <img src="isotipo.png" alt="" width="42" height="42">
+        Tecnolakis
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+        <li><a href="#nosotros">Quiénes somos</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a class="lang" href="portugues/" lang="pt" title="Versão em português" aria-label="Versão em português"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009C3B"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FFDF00"/><circle cx="14" cy="10" r="4.6" fill="#002776"/><path d="M9.6 9.1c2.8-.5 6.2 0 8.8 1.6" fill="none" stroke="#fff" stroke-width=".9"/></svg><span class="lang-text">Português</span></a></li>
+        <li><a class="btn btn-primary wa-link" href="#">Hablemos</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Outsourcing IT para empresas</span>
+          <h1>Tecnología que <em>trabaja</em> para tu negocio.</h1>
+          <p class="lead">Somos tu partner tecnológico: nos ocupamos de tus sistemas, redes, seguridad y soporte para que vos te enfoques en hacer crecer tu empresa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary wa-link" href="#">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.3Z"/></svg>
+              Escribinos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <p class="hero-note">Tu partner tecnológico de confianza · Ahora también con <strong>IA a través de Felizia</strong>.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob"></div>
+          <img class="mark" src="isotipo.png" alt="">
+          <span class="chip c1"><i></i> Soporte cuando lo necesitás</span>
+          <span class="chip c2"><i></i> Redes seguras</span>
+          <span class="chip c3"><i></i> Costos bajo control</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Servicios</span>
+          <h2>Todo lo que tu empresa necesita en tecnología, en un solo lugar</h2>
+          <p>Con compromiso, agilidad y flexibilidad: te acompañamos desde el día a día hasta los proyectos más grandes.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <h3>Gestión del departamento de sistemas</h3>
+            <p>Para empresas sin área de sistemas propia, o que prefieren tercerizarla.</p>
+            <ul><li>Relevamiento completo</li><li>Plan de trabajo a medida</li><li>Gestión integral de IT</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+            <h3>Soporte a usuarios</h3>
+            <p>Resolvemos las incidencias de tu equipo para que nadie se quede parado.</p>
+            <ul><li>Antivirus y sistemas operativos</li><li>Ofimática y aplicaciones</li><li>Inventario de equipos</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></svg></div>
+            <h3>Networking</h3>
+            <p>Redes físicas y lógicas para conectar equipos y oficinas desde cualquier lugar.</p>
+            <ul><li>Cableado y Wi-Fi</li><li>Conexión entre sucursales</li><li>Voz, imagen y datos seguros</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Seguridad informática</h3>
+            <p>Miramos tu seguridad desde el punto de vista de un atacante para minimizar riesgos.</p>
+            <ul><li>Firewalls y políticas</li><li>Tests de intrusión</li><li>Evaluación de riesgos</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+            <h3>Telefonía</h3>
+            <p>Centrales analógicas e IP, y análisis de consumos para bajar costos.</p>
+            <ul><li>Centrales telefónicas IP</li><li>Reducción de costos móviles</li><li>Convenios con prestadoras</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6M11 8v6"/></svg></div>
+            <h3>Consultoría</h3>
+            <p>Asesoramiento en soluciones tecnológicas alineadas a tu negocio.</p>
+            <ul><li>Diagnóstico de infraestructura</li><li>Fortalezas y debilidades</li><li>Hoja de ruta tecnológica</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+            <h3>Desarrollo web</h3>
+            <p>Desarrollos a medida para mejorar la presencia online de tu negocio.</p>
+            <ul><li>Sitios web y landings</li><li>Sistemas a medida</li><li>Mantenimiento y hosting</li></ul>
+          </article>
+          <a class="card felizia reveal" href="https://www.felizia.com.ar" target="_blank" rel="noopener">
+            <div class="icon"><svg viewBox="0 0 200 140" aria-hidden="true"><path d="M22 40 A78 78 0 0 0 172 52" fill="none" stroke="#1B3A6F" stroke-width="22" stroke-linecap="round"/><circle cx="176" cy="36" r="22" fill="#FF7A50"/></svg></div>
+            <h3>Inteligencia artificial</h3>
+            <p>Automatizaciones, agentes IA y capacitación a través de Felizia, nuestra división de IA.</p>
+            <span class="more">Conocé Felizia →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section id="como-trabajamos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>Una metodología ágil, pensada para tu empresa</h2>
+          <p>Trabajamos en red, con el talento que requiere cada proyecto y soluciones a la medida de tus necesidades.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Relevamos</h3>
+            <p>Conocemos tu empresa, tus equipos y cómo trabaja tu gente.</p>
+            <span class="time">Primera visita sin cargo</span>
+          </div>
+          <div class="step reveal">
+            <h3>Planificamos</h3>
+            <p>Te proponemos un plan de trabajo claro, con prioridades y costos.</p>
+            <span class="time">Sin sorpresas</span>
+          </div>
+          <div class="step reveal">
+            <h3>Implementamos</h3>
+            <p>Ponemos en marcha las soluciones con el menor impacto en tu día a día.</p>
+            <span class="time">Rápido y ordenado</span>
+          </div>
+          <div class="step reveal">
+            <h3>Acompañamos</h3>
+            <p>Soporte y mantenimiento continuo para que todo siga funcionando.</p>
+            <span class="time">Siempre cerca</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="why" id="nosotros">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Quiénes somos</span>
+          <h2>Profesionales con experiencia, cerca de tu empresa</h2>
+          <p>Somos una empresa de tecnologías de la información y las comunicaciones que presta servicios de outsourcing IT, con una metodología propia basada en métodos ágiles y flexibles.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-box reveal">
+            <h3>Misión</h3>
+            <p>Ayudar a nuestros clientes a tener éxito, convirtiendo las posibilidades de la tecnología en soluciones que simplifican los negocios.</p>
+          </div>
+          <div class="about-box reveal">
+            <h3>Visión</h3>
+            <p>Ser reconocidos como un proveedor innovador, con soluciones de alta calidad y capacidad para resolver los problemas más complejos.</p>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+            <h3>Colaboración</h3><p>Confiamos en los demás y compartimos buenas ideas y soluciones.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/></svg></div>
+            <h3>Innovación</h3><p>Nos gustan los grandes desafíos y resolverlos de forma creativa.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
+            <h3>Compromiso</h3><p>Ponemos el corazón y la mente en todo lo que hacemos.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+            <h3>Calidad</h3><p>Buscamos la excelencia en cada proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="faq" id="preguntas">
+      <div class="wrap faq-grid">
+        <div class="section-head reveal">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Lo que nos suelen preguntar</h2>
+          <p>¿Tenés otra duda? Escribinos por WhatsApp y te respondemos.</p>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>No tengo área de sistemas, ¿pueden ser mi departamento de IT?</summary>
+            <p>Sí, es uno de nuestros servicios principales. Hacemos un relevamiento, armamos un plan de trabajo y nos ocupamos de la gestión tecnológica de tu empresa como si fuéramos parte de tu equipo.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Trabajan con empresas chicas?</summary>
+            <p>Sí. Adaptamos el servicio al tamaño y la necesidad de cada empresa, desde un comercio con pocos equipos hasta organizaciones con varias sucursales.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo funciona el soporte?</summary>
+            <p>Atendemos las incidencias de tus usuarios de forma remota o presencial, según lo que haga falta, y llevamos un registro para prevenir que los problemas se repitan.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Pueden ayudarme a bajar costos de telefonía?</summary>
+            <p>Sí. Analizamos tus consumos de telefonía fija y móvil, te asesoramos sobre tecnologías como la telefonía IP y trabajamos con convenios con las principales prestadoras.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cuánto cuesta?</summary>
+            <p>Depende de lo que necesites. La primera reunión es sin cargo: conocemos tu empresa y después te enviamos una propuesta con alcance y costo claros.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué es Felizia?</summary>
+            <p>Es la división de inteligencia artificial de Grupo Tecnolakis. Ayuda a las PyMEs a automatizar tareas, sumar asistentes IA y capacitar a sus equipos. Conocé más en <a href="https://www.felizia.com.ar" target="_blank" rel="noopener">felizia.com.ar</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="wrap">
+        <div class="cta-box reveal">
+          <span class="eyebrow">¿Hablamos?</span>
+          <h2>Contanos qué necesita tu empresa en tecnología</h2>
+          <p>Te respondemos por WhatsApp o mail y coordinamos una primera charla sin cargo ni compromiso.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary wa-link" href="#">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.3Z"/></svg>
+              Escribinos por WhatsApp
+            </a>
+            <a class="btn btn-dark" href="mailto:info@tecnolakis.com.ar?subject=Consulta%20desde%20tecnolakis.com.ar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              info@tecnolakis.com.ar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <small>© <span id="year">2026</span> Grupo Tecnolakis · www.tecnolakis.com.ar</small>
+      <ul class="social">
+        <li><a href="https://www.instagram.com/tecnolakis/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a></li>
+        <li><a href="https://www.facebook.com/Tecnolakis-101014766898132/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg></a></li>
+        <li><a href="https://twitter.com/tecnolakis" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></a></li>
+        <li><a href="https://ar.linkedin.com/in/pablo-rago-684b503a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4V9.5Z"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a class="wa-float wa-link" href="#" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.3Z"/></svg>
+  </a>
+
+  <script>
+    // Número de WhatsApp: solo dígitos (54 9 + área + número)
+    const WHATSAPP = "5493468509019";
+    const MENSAJE = "Hola Tecnolakis, me gustaría hacer una consulta para mi empresa.";
+    const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAJE);
+    document.querySelectorAll(".wa-link").forEach(a => {
+      a.href = waUrl; a.target = "_blank"; a.rel = "noopener";
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menú móvil
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("menu");
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      menu.classList.remove("open"); toggle.setAttribute("aria-expanded", "false");
+    }));
+
+    // El logo siempre vuelve al principio de la página
+    document.querySelector(".brand").addEventListener("click", e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      history.replaceState(null, "", location.pathname);
+    });
+
+    // Borde del header al hacer scroll
+    const header = document.querySelector("header");
+    addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 8), { passive: true });
+
+    // Aparición suave de secciones
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+    }
+  </script>
+</body>
+</html>
