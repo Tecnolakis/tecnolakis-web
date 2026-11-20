@@ -137,8 +137,8 @@
     .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; color: #6D6E71; }
     .brand img { width: 42px; height: 42px; }
-    .menu { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .menu a { text-decoration: none; font-weight: 700; color: var(--muted); }
+    .menu { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .menu a { text-decoration: none; font-weight: 700; color: var(--muted); white-space: nowrap; }
     .menu a:hover { color: var(--ink); }
     .langs { display: flex; align-items: center; gap: 10px; }
     .menu .flag { display: inline-flex; padding: 4px; border-radius: 6px; line-height: 0; transition: transform .15s ease, background .15s ease; }
@@ -264,6 +264,40 @@
     .why-item h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
     .why-item p { color: #C5CCD3; }
 
+    /* Dónde estamos */
+    .locations { background: #fff; border-top: 1px solid var(--line); }
+    .loc-grid { display: grid; grid-template-columns: 360px 1fr; gap: 24px; align-items: stretch; }
+    .loc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .loc-item {
+      width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer;
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
+      padding: 14px 16px;
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+    }
+    .loc-item:hover { border-color: #D2DBC3; transform: translateX(2px); }
+    .loc-item.active { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(178,210,67,.25); background: #fff; }
+    .loc-item .dot { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(178,210,67,.2); }
+    .mini-flag { width: 22px; height: 15px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(36,48,59,.15); vertical-align: -2px; }
+    .loc-item b { display: block; font-weight: 800; font-size: 1.02rem; }
+    .loc-item span { display: block; color: var(--muted); font-size: .9rem; line-height: 1.4; margin-top: 2px; }
+    .loc-reset { margin-top: 6px; align-self: flex-start; background: none; border: 0; font: inherit; font-weight: 800; color: var(--lime-text); cursor: pointer; padding: 6px 2px; }
+    .loc-reset:hover { text-decoration: underline; }
+    .map-wrap { position: relative; min-height: 560px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: radial-gradient(circle at 50% 40%, #1d2833 0%, #0f151b 70%); }
+    #mapa { position: absolute; inset: 0; }
+    .map-hint { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 2; background: rgba(36,48,59,.85); color: #fff; font-size: .85rem; font-weight: 700; padding: 8px 14px; border-radius: 999px; pointer-events: none; transition: opacity .4s; white-space: nowrap; }
+    .map-hint.hide { opacity: 0; }
+    /* Pin con el logo */
+    .tk-pin { width: 44px; height: 56px; cursor: pointer; filter: drop-shadow(0 6px 10px rgba(0,0,0,.35)); transition: transform .25s ease; transform-origin: 50% 100%; }
+    .tk-pin svg { width: 100%; height: 100%; display: block; }
+    .tk-pin.small { transform: scale(.6); }
+    .tk-pin.active { transform: scale(1.15); }
+    .maplibregl-popup-content { font-family: inherit; border-radius: 14px; padding: 14px 16px 12px; box-shadow: 0 12px 30px rgba(0,0,0,.2); max-width: 280px; }
+    .pop h4 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; color: var(--ink); }
+    .pop p { font-size: .88rem; color: var(--muted); line-height: 1.4; }
+    .pop img { width: 100%; border-radius: 10px; margin-top: 10px; display: block; }
+    .pop a { display: inline-block; margin-top: 8px; font-weight: 800; font-size: .88rem; color: var(--lime-text); }
+
     /* Preguntas frecuentes */
     .faq { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
@@ -346,9 +380,11 @@
       .chip { font-size: .8rem; padding: 8px 10px; }
       .chip.c1 { left: -2%; } .chip.c2 { right: -2%; }
       .about-grid { grid-template-columns: 1fr; }
+      .loc-grid { grid-template-columns: 1fr; }
+      .loc-grid .map-wrap { order: -1; min-height: 420px; }
     }
     /* Menú hamburguesa: con 4 idiomas el menú completo necesita más ancho */
-    @media (max-width: 1000px) {
+    @media (max-width: 1180px) {
       .menu-toggle { display: block; }
       .menu {
         display: none;
@@ -392,6 +428,7 @@
         <li><a href="#servicios">Services</a></li>
         <li><a href="#como-trabajamos">How we work</a></li>
         <li><a href="#nosotros">About us</a></li>
+        <li><a href="#donde-estamos">Where we are</a></li>
         <li><a href="#preguntas">FAQ</a></li>
         <li class="langs">
           <!--FLAG-A--><a class="flag" href="/" hreflang="es" lang="es" title="Español" aria-label="Versión en español"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#74ACDF"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><circle cx="30" cy="20" r="4.4" fill="#F6B40E" stroke="#85340A" stroke-width=".7"/></svg></a><!--/FLAG-A-->
@@ -563,6 +600,27 @@
       </div>
     </section>
 
+    <!-- DÓNDE ESTAMOS -->
+    <section class="locations" id="donde-estamos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where we are</span>
+          <h2>Close to you</h2>
+          <p>Tap a city and we'll take you right to the door.</p>
+        </div>
+        <div class="loc-grid">
+          <div>
+            <ul class="loc-list" id="loc-list"></ul>
+            <button class="loc-reset" id="loc-reset" type="button">↺ See the full map</button>
+          </div>
+          <div class="map-wrap">
+            <div id="mapa" role="region" aria-label="Map of Tecnolakis offices"></div>
+            <span class="map-hint" id="map-hint">Choose a city from the list</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PREGUNTAS FRECUENTES -->
     <section class="faq" id="preguntas">
       <div class="wrap faq-grid">
@@ -680,6 +738,149 @@
     } else {
       document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
     }
+  </script>
+
+  <script>
+    // ===== Dónde estamos: globo 3D con las oficinas =====
+    const OFICINAS = [
+      { id: "rosario",  flag: "🇦🇷", ciudad: "Rosario, Argentina",      dir: "Marcos Paz 6217, Belgrano neighborhood, Rosario, Santa Fe.", lnglat: [-60.7071390, -32.9389919] },
+      { id: "campo",    flag: "🇧🇷", ciudad: "Campo Grande, Brazil",    dir: "Rua Dona Joana 461, Campo Grande, Mato Grosso do Sul.", lnglat: [-54.5926931, -20.4738534] },
+      { id: "asuncion", flag: "🇵🇾", ciudad: "Asunción, Paraguay",      dir: "World Trade Center Asunción, Av. Aviadores del Chaco 2050, Asunción.", lnglat: [-57.5669097, -25.2842975], fotos: "https://commons.wikimedia.org/wiki/Category:World_Trade_Center_Asunci%C3%B3n" },
+      { id: "santiago", flag: "🇨🇱", ciudad: "Santiago, Chile",         dir: "Casa Origen, Alfredo Rioseco 275, Providencia, Santiago.", lnglat: [-70.6275969, -33.4427390], fotos: "https://www.casaorigen.com/" },
+      { id: "miami",    flag: "🇺🇸", ciudad: "Miami, United States",   dir: "801 Brickell Avenue, Miami, FL 33131.", lnglat: [-80.1902892, 25.7655804], fotos: "https://801brickellmia.com/" },
+      { id: "pekin",    flag: "🇨🇳", ciudad: "Beijing, China",            dir: "Nanyang 5Lmeet, 6 Nanyang Hutong, Dongcheng District, Beijing.", lnglat: [116.4074582, 39.9279223], fotos: "https://www.gooood.cn/en/nanyang-5lmeet-daga-architects.htm" }
+    ];
+    // Banderas dibujadas (Windows no muestra los emojis de banderas)
+    const STAR = "M0,-1L.2245,-.309L.9511,-.309L.3633,.118L.5878,.809L0,.382L-.5878,.809L-.3633,.118L-.9511,-.309L-.2245,-.309Z";
+    const BANDERAS = {
+      "🇦🇷": '<rect width="60" height="40" fill="#74ACDF"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><circle cx="30" cy="20" r="4.4" fill="#F6B40E" stroke="#85340A" stroke-width=".7"/>',
+      "🇨🇱": `<rect width="60" height="40" fill="#fff"/><rect y="20" width="60" height="20" fill="#D52B1E"/><rect width="20" height="20" fill="#0039A6"/><path d="${STAR}" transform="translate(10 10) scale(5)" fill="#fff"/>`,
+      "🇵🇾": '<rect width="60" height="40" fill="#fff"/><rect width="60" height="13.33" fill="#D52B1E"/><rect y="26.67" width="60" height="13.33" fill="#0038A8"/><circle cx="30" cy="20" r="4.6" fill="none" stroke="#2D7D32" stroke-width="1.2"/><circle cx="30" cy="20" r="1.6" fill="#F6B40E"/>',
+      "🇧🇷": '<rect width="60" height="40" fill="#009C3B"/><path d="M30 4 56 20 30 36 4 20z" fill="#FFDF00"/><circle cx="30" cy="20" r="9" fill="#002776"/><path d="M21.3 18.2c5.5-1.3 11.6-.6 17 2.6" fill="none" stroke="#fff" stroke-width="1.6"/>',
+      "🇺🇸": '<rect width="60" height="40" fill="#B22234"/><path d="M0 3.08h60v3.08H0zM0 9.23h60v3.08H0zM0 15.38h60v3.08H0zM0 21.54h60v3.08H0zM0 27.69h60v3.08H0zM0 33.85h60v3.08H0z" fill="#fff"/><rect width="24" height="21.54" fill="#3C3B6E"/>',
+      "🇨🇳": `<rect width="60" height="40" fill="#EE1C25"/><g fill="#FFFF00"><path d="${STAR}" transform="translate(10 10) scale(6)"/><path d="${STAR}" transform="translate(20 4) rotate(239) scale(2)"/><path d="${STAR}" transform="translate(24 8) rotate(262) scale(2)"/><path d="${STAR}" transform="translate(24 14) rotate(286) scale(2)"/><path d="${STAR}" transform="translate(20 18) rotate(309) scale(2)"/></g>`
+    };
+    const bandera = f => `<svg class="mini-flag" viewBox="0 0 60 40" aria-hidden="true">${BANDERAS[f] || ""}</svg>`;
+    const VISTA_GENERAL = { center: [-55, -5], zoom: 1.5, pitch: 0, bearing: 0 };
+    const TEXTO_FOTOS = "See photos ↗";
+    const ISOTIPO = document.querySelector(".brand img").getAttribute("src");
+
+    (function () {
+      const lista = document.getElementById("loc-list");
+      const hint = document.getElementById("map-hint");
+      const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let map = null, popup = null, activo = null;
+      const pins = {};
+
+      // Lista de ciudades
+      OFICINAS.forEach(o => {
+        const li = document.createElement("li");
+        li.innerHTML = `<button class="loc-item" type="button" data-id="${o.id}"><span class="dot" aria-hidden="true">${bandera(o.flag)}</span><span><b>${o.ciudad}</b><span>${o.dir}</span></span></button>`;
+        lista.appendChild(li);
+      });
+      lista.addEventListener("click", e => {
+        const b = e.target.closest(".loc-item");
+        if (b) ir(b.dataset.id);
+      });
+      document.getElementById("loc-reset").addEventListener("click", verTodo);
+
+      function pinSVG() {
+        return `<svg viewBox="0 0 44 56" aria-hidden="true"><path d="M22 55S4 34 4 22a18 18 0 1 1 36 0c0 12-18 33-18 33Z" fill="#24303B"/><circle cx="22" cy="22" r="15" fill="#fff"/><image href="${ISOTIPO}" x="8" y="8" width="28" height="28"/></svg>`;
+      }
+
+      function contenidoPopup(o) {
+        let html = `<div class="pop"><h4>${bandera(o.flag)} ${o.ciudad}</h4><p>${o.dir}</p>`;
+        if (o.foto) html += `<img src="${o.foto}" alt="Fachada en ${o.ciudad}" loading="lazy">`;
+        if (o.fotos) html += `<a href="${o.fotos}" target="_blank" rel="noopener">${TEXTO_FOTOS}</a>`;
+        return html + "</div>";
+      }
+
+      function marcarActivo(id) {
+        activo = id;
+        document.querySelectorAll(".loc-item").forEach(b => b.classList.toggle("active", b.dataset.id === id));
+        Object.entries(pins).forEach(([k, el]) => {
+          el.classList.toggle("active", k === id);
+          el.classList.toggle("small", !!id && k !== id);
+        });
+      }
+
+      function ir(id) {
+        const o = OFICINAS.find(x => x.id === id);
+        if (!o) return;
+        hint.classList.add("hide");
+        marcarActivo(id);
+        // En celular el mapa está arriba de la lista: lo traemos a la vista
+        if (matchMedia("(max-width: 760px)").matches) {
+          document.querySelector(".map-wrap").scrollIntoView({ behavior: quieto ? "auto" : "smooth", block: "center" });
+        }
+        if (!map) { pendiente = id; return; }
+        if (popup) popup.remove();
+        // El pin queda más abajo del centro para que entre la tarjeta (con foto) arriba
+        const bajar = Math.round(map.getContainer().clientHeight * (o.foto ? 0.3 : 0.18));
+        const destino = { center: o.lnglat, zoom: 15.6, pitch: 45, bearing: -15, offset: [0, bajar] };
+        const abrir = () => {
+          if (activo !== id) return;
+          popup = new maplibregl.Popup({ offset: [0, -52], closeButton: true, maxWidth: "290px", focusAfterOpen: false })
+            .setLngLat(o.lnglat).setHTML(contenidoPopup(o)).addTo(map);
+        };
+        if (quieto) { map.jumpTo(destino); abrir(); return; }
+        map.flyTo({ ...destino, speed: 0.9, curve: 1.6, essential: true });
+        map.once("moveend", abrir);
+      }
+
+      function verTodo() {
+        marcarActivo(null);
+        if (popup) popup.remove();
+        hint.classList.remove("hide");
+        if (!map) return;
+        quieto ? map.jumpTo(VISTA_GENERAL) : map.flyTo({ ...VISTA_GENERAL, speed: 1.1, essential: true });
+      }
+
+      let pendiente = null;
+      function cargarMapa() {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.css";
+        document.head.appendChild(css);
+        const js = document.createElement("script");
+        js.src = "https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.js";
+        js.onload = iniciar;
+        document.head.appendChild(js);
+      }
+
+      function iniciar() {
+        map = new maplibregl.Map({
+          container: "mapa",
+          style: "https://tiles.openfreemap.org/styles/liberty",
+          ...VISTA_GENERAL,
+          attributionControl: { compact: true },
+          cooperativeGestures: matchMedia("(pointer: coarse)").matches
+        });
+        map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+        map.on("style.load", () => map.setProjection({ type: "globe" }));
+        OFICINAS.forEach(o => {
+          const el = document.createElement("div");
+          el.className = "tk-pin";
+          el.innerHTML = pinSVG();
+          el.title = o.ciudad;
+          el.addEventListener("click", e => { e.stopPropagation(); ir(o.id); });
+          new maplibregl.Marker({ element: el, anchor: "bottom", opacityWhenCovered: "0" }).setLngLat(o.lnglat).addTo(map);
+          pins[o.id] = el;
+        });
+        map.on("load", () => { if (pendiente) { const p = pendiente; pendiente = null; ir(p); } });
+      }
+
+      // El mapa se carga recién cuando la sección está por aparecer
+      const seccion = document.getElementById("donde-estamos");
+      if ("IntersectionObserver" in window) {
+        const obs = new IntersectionObserver(es => {
+          if (es.some(e => e.isIntersecting)) { obs.disconnect(); cargarMapa(); }
+        }, { rootMargin: "400px" });
+        obs.observe(seccion);
+      } else {
+        cargarMapa();
+      }
+    })();
   </script>
 </body>
 </html>
