@@ -2,23 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.tecnolakis.com.ar/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.tecnolakis.com.ar/zh/"/>
   </url>
   <url>
     <loc>https://www.tecnolakis.com.ar/en/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.tecnolakis.com.ar/zh/"/>
   </url>
   <url>
     <loc>https://www.tecnolakis.com.ar/portugues/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.tecnolakis.com.ar/zh/"/>
+  </url>
+  <url>
+    <loc>https://www.tecnolakis.com.ar/zh/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tecnolakis.com.ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tecnolakis.com.ar/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.tecnolakis.com.ar/portugues/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.tecnolakis.com.ar/zh/"/>
   </url>
 </urlset>
